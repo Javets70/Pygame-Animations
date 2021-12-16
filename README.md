@@ -122,7 +122,7 @@ while True:
     pygame.display.update()
     fps.tick(frames)
 ```
-![Mover](green_moving.gif)
+![Mover](moving.gif)
 ## Smooth Scale (SmoothScale)
 This animation scales the surface to a new `[height , width]`.
 It can be more or less than the original size.
