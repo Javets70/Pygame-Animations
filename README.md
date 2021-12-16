@@ -53,4 +53,4 @@ while True:
 
     fps.tick(frames)
 ```
-![Green-Block](https://imgur.com/a/EbRZHpF)
+![Green-Block](Floater.gif)
