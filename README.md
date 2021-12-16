@@ -1,4 +1,5 @@
 
+
 # Pygame Animations
 This code allows you to add smooth movement and scaling to pygame surfaces.
 Mostly all the animation types require a duration (in seconds) and a function (if you dont want to use the default function).
@@ -14,7 +15,19 @@ easings.py
 ## Floating Animation (Float)
 This animation runs indefinitely and adds a floating effect to the surface.
 
+#### Arguments :
+(surface_rectangle , magnitude , axis , duration , function = inOutCubic)
 
+`magnitude` is the number of pixels the surface travels on the screen.
+
+`axis` is either `"x"` or `"y"`.
+
+`duration` is always in seconds. Its the time taken to complete once cycle.
+
+`function` is the easing-function imported from easings.py and set to default as `inOutCubic`
+
+
+`Float.start_float()` returns a new value according to the `axis` passed and it must assigned to `surface_rect.x` or `surface_rect.y` in the main pygame loop.
 #### Example
 
 ```python
@@ -53,4 +66,5 @@ while True:
 
     fps.tick(frames)
 ```
+
 ![Green-Block](Floater.gif)
