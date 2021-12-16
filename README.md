@@ -67,6 +67,7 @@ while True:
 
     fps.tick(frames)
 ```
+![](Floater.gif)
 
 ## Smooth Movement (Move)
 
