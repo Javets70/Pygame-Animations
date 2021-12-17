@@ -178,3 +178,58 @@ while True:
 ```
 <img src="green_scaling.gif" width="200">
 
+
+## Change Color (Colorshift)
+This animation allows you to change color slowly , reverse it and repeat it.
+
+#### Arguments
+`__init__(starting_color , ending_color , rate , reverse = False , repeat = False)`
+
+- `starting_color` is the initial color/ the color you want to start with.
+
+- `ending_color` is the final color which will be returned.
+
+- Both the colors must be either in `R,G,B` format.
+
+- `rate` is directly proportional to the time taken to complete 1 cycle of this animation. It must be +ve value.
+
+---
+`Colorshift.changecolor()`
+- It must be called in the main loop
+
+#### Example
+```python3
+import pygame
+from Animations import Colorshift
+import sys
+
+pygame.init()
+
+Screen = pygame.display.set_mode((700, 700))
+fps = pygame.time.Clock()
+frames = 60
+
+surface = pygame.Surface((150, 150))
+surface_rect = surface.get_rect(x=250, y=250)
+surface.fill(pygame.Color("green"))
+
+color = Colorshift(pygame.Color("red"), pygame.Color("white"), 3, True, True)
+
+while True:
+    Screen.fill(pygame.Color("black"))
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            sys.exit()
+
+    surface.fill(color.changecolor())
+    Screen.blit(surface, surface_rect)
+
+    pygame.display.update()
+    fps.tick(frames)
+```
+<img src="https://i.imgur.com/50utouJ.gif" width="200">
+
+
+
+
