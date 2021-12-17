@@ -177,3 +177,5 @@ while True:
     fps.tick(frames)
 ```
 <img src="green_scaling.gif" width="200">
+<img src="https://imgur.com/a/TFTbNoW" width="200">
+
