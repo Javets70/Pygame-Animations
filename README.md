@@ -176,4 +176,4 @@ while True:
     pygame.display.update()
     fps.tick(frames)
 ```
-![Green-Scaler](green_scaling.gif =x50)
+<img src="green_scaling.gif" width="200">
