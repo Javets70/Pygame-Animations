@@ -18,7 +18,7 @@ Mostly all the animation types require a duration (in seconds) and a function (i
 This animation runs indefinitely and adds a floating effect to the surface.
 
 #### Arguments :
-- **`__init__(surface_rectangle , magnitude , axis , duration , function = inOutCubic)`**
+**`__init__(surface_rectangle , magnitude , axis , duration , function = inOutCubic)`**
 
 - `magnitude` is the number of pixels the surface travels on the screen.
 
@@ -29,7 +29,7 @@ This animation runs indefinitely and adds a floating effect to the surface.
 - `function` is the easing-function imported from easings.py and set to default as `inOutCubic`
 
 ---
-`Float.start_float()` 
+**`Float.start_float()`** 
 
 - It returns a new value according to the `axis` passed and it must assigned to `surface_rect.x` or `surface_rect.y` in the main pygame loop.
 #### Example
@@ -77,14 +77,14 @@ while True:
 This animation moves the surface to a desired position.
 #### Arguments:
 
-- `__init__(surface_rectangle , duration , function = inOutCubic)`
+**`__init__(surface_rectangle , duration , function = inOutCubic)`**
 
 - `duration` is the time taken to move the surface from its old position to the `new_position`.
 
 - `function` is the easing-function imported from easings.py and set to default as `inOutCubic`.  
 
 ---
-`Move.moveto(new_position)`
+**`Move.moveto(new_position)`**
 - `new_position` must be a list having `[new_xpos , new_ypos]` 
 Also the function must be called inside the main loop
 
@@ -131,7 +131,7 @@ This animation scales the surface to a new `[height , width]`.
 It can be more or less than the original size.
 
 #### Arguments
-- `__init__(surface , new_size , duration , function = inOutCubic)`
+**`__init__(surface , new_size , duration , function = inOutCubic)`**
 
 - `new_size` must be a list/tuple having new `height , width` 
 
@@ -186,7 +186,7 @@ while True:
 This animation allows you to change color slowly , reverse it and repeat it.
 
 #### Arguments
-`__init__(starting_color , ending_color , rate , reverse = False , repeat = False)`
+**`__init__(starting_color , ending_color , rate , reverse = False , repeat = False)`**
 
 - `starting_color` is the initial color/ the color you want to start with.
 
@@ -197,9 +197,11 @@ This animation allows you to change color slowly , reverse it and repeat it.
 - `rate` is directly proportional to the time taken to complete 1 cycle of this animation. It must be +ve value.
 
 ---
-`Colorshift.changecolor()`
+**`Colorshift.changecolor()`**
 - It must be called in the main loop
+- It returns a new color.
 
+---
 #### Example
 ```python3
 import pygame
