@@ -293,7 +293,7 @@ while True:
     pygame.display.update()
     fps.tick(frames)
 ```
-<img src="https://i.imgur.com/K6gDlg9.mp4" width="200">
+<img src="particles.gif" width="200">
 
 
 
