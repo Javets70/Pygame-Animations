@@ -6,11 +6,14 @@ Mostly all the animation types require a duration (in seconds) and a function (i
 
 
 ## Requirements
-python3
+- **python3
 
-pygame 1.9.5
+- **pygame 1.9.5
 
-easings.py
+- **easings.py
+
+- **Animations.py
+- 
 ## Floating Animation (Float)
 This animation runs indefinitely and adds a floating effect to the surface.
 
