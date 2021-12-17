@@ -238,5 +238,63 @@ while True:
 <img src="https://i.imgur.com/50utouJ.gif" width="200">
 
 
+## Particle Generators (Particles)
+This generates particles at the position passed in.
+
+#### Arguments
+
+**`__init__(render_surface)`**
+- `render_surface` is the surface you want to generate the particles on.
+
+**`Particles.append_particles(position , velocity , radius , color , rate)`**
+- `position` is the `x,y` coordinates for a particle.
+- `velocity` is the direction and speed at which the particles are headed.
+- `radius` defines the size of the particle.
+- `color` is the color for the particles
+- `rate` defines how fast or slow the particles disappear
+- The function must be called in the main loop
+
+**`Particles.make_particles()`**
+- Blits the particles onto the screen
+- The function must be called in the main loop
+
+---
+#### Example
+```python3
+import pygame
+from Animations import Particles
+import sys
+import random
+
+pygame.init()
+
+Screen = pygame.display.set_mode((700, 700))
+fps = pygame.time.Clock()
+frames = 60
+
+Particle_gen = Particles(Screen)
+while True:
+    Screen.fill(pygame.Color("black"))
+
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            sys.exit()
+
+    Particle_gen.append_particles(
+        [350, 550],
+        [random.randint(0, 60) / 10 - 2, -1 * random.randint(0, 100) / 10 - 1],
+        25,
+        0.2,
+        pygame.Color("green"),
+    )
+    Particle_gen.make_particles()
+
+    pygame.display.update()
+    fps.tick(frames)
+```
+<img src="https://i.imgur.com/K6gDlg9.mp4" width="200">
+
+
 
 
