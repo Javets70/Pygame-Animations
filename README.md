@@ -85,8 +85,9 @@ This animation moves the surface to a desired position.
 
 ---
 **`Move.moveto(new_position)`**
-- `new_position` must be a list having `[new_xpos , new_ypos]` 
-Also the function must be called inside the main loop
+- `new_position` must be a list having `[new_xpos , new_ypos]`. 
+
+- The function must be called inside the main loop.
 
 
 
@@ -126,6 +127,8 @@ while True:
     fps.tick(frames)
 ```
 <img src="moving.gif" width="200">
+---
+
 ## Smooth Scale (SmoothScale)
 This animation scales the surface to a new `[height , width]`.
 It can be more or less than the original size.
