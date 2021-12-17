@@ -127,7 +127,6 @@ while True:
     fps.tick(frames)
 ```
 <img src="moving.gif" width="200">
----
 
 ## Smooth Scale (SmoothScale)
 This animation scales the surface to a new `[height , width]`.
